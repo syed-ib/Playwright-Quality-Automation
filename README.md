@@ -30,7 +30,28 @@ Features:
 
 ## Project Structure
 
-pages/ → Page Objects
-tests/ → Test specifications
-widgets/ → DragDrop, Slider, Dropdown grouped
-.github/ → GitHub Actions workflow
+playwright-quality-automation/
+├── pages/                   # Page Objects
+│   ├── AlertPage.ts
+│   ├── CheckboxPage.ts
+│   ├── DragDropPage.ts
+│   ├── DropdownPage.ts
+│   ├── FormPage.ts
+│   ├── MenuPage.ts
+│   ├── PopupPage.ts
+│   └── SliderPage.ts
+├── tests/                   # Tests
+│   ├── alerts/alerts.spec.ts
+│   ├── checkboxes/checkboxes.spec.ts
+│   ├── forms/forms.spec.ts
+│   ├── menu/menu.spec.ts
+│   ├── popups/popup.spec.ts
+│   └── widgets/             # Grouped widgets
+│       ├── dragdrop.spec.ts
+│       ├── slider.spec.ts
+│       └── dropdown.spec.ts
+├── .github/workflows/playwright.yml  # CI workflow
+├── .gitignore
+├── package.json
+├── playwright.config.ts
+└── README.md                # Project description, setup, usage
