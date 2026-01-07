@@ -46,23 +46,23 @@ export class FormPage {
     await this.page.getByPlaceholder(placeholder).fill(value);
   }
 
-  /** Navigate calendar to a specific year and month, then select a day */
-  async selectDateInCalendar(targetYear: number, targetMonth: string, day: string) {
-    const title = this.page.locator('.ui-datepicker-title');
+  // /** Navigate calendar to a specific year and month, then select a day */
+  // async selectDateInCalendar(targetYear: number, targetMonth: string, day: string) {
+  //   const title = this.page.locator('.ui-datepicker-title');
     
-    await expect(title).toBeVisible();
+  //   await expect(title).toBeVisible();
 
-    // Move until correct year
-    while (!(await title.textContent())?.includes(targetYear.toString())) {
-      await this.page.locator('.ui-datepicker-next').click();
-    }
+  //   // Move until correct year
+  //   while (!(await title.textContent())?.includes(targetYear.toString())) {
+  //     await this.page.locator('.ui-datepicker-next').click();
+  //   }
 
-    // Move until correct month
-    while (!(await title.textContent())?.toLowerCase().includes(targetMonth.toLowerCase())) {
-      await this.page.locator('.ui-datepicker-next').click();
-    }
+  //   // Move until correct month
+  //   while (!(await title.textContent())?.toLowerCase().includes(targetMonth.toLowerCase())) {
+  //     await this.page.locator('.ui-datepicker-next').click();
+  //   }
 
-    // Select day
-    await this.page.getByRole('link', { name: day, exact: true }).click();
-  }
+  //   // Select day
+  //   await this.page.getByRole('link', { name: day, exact: true }).click();
+  // }
 }

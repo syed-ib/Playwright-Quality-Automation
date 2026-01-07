@@ -12,10 +12,10 @@ export default defineConfig({
   },
 
   // Fail fast on CI, allow retries only where needed
-  retries: process.env.CI ? 1 : 0,
+  // retries: process.env.CI ? 1 : 0,
 
-  // Parallelism control
-  workers: process.env.CI ? 2 : undefined,
+  // // Parallelism control
+  // workers: process.env.CI ? 2 : undefined,
 
   // Clean, readable reports
   reporter: [
@@ -33,13 +33,18 @@ export default defineConfig({
     // Screenshot only on failure
     screenshot: 'only-on-failure',
 
-    // Video only on failure
-    video: 'retain-on-failure',
-
+    // For demo purposes
+  headless: false,          // UI is visible
+  video: 'retain-on-failure',  // Records video on failure; change to 'on' for all tests
+  
     // Navigation stability
     navigationTimeout: 30 * 1000,
     actionTimeout: 15 * 1000,
   },
+
+   forbidOnly: false,       // allow multiple tests to run
+  fullyParallel: true,     // run tests in parallel if possible
+  workers: process.env.CI ? 2 : undefined,
 
   projects: [
     {
