@@ -1,37 +1,42 @@
-import { test, expect } from '@playwright/test';
-import { FormPage } from '../../pages/FormPage';
+import { test } from '@playwright/test';
+import { FormPage } from '../../pages/FormsPage';
+
+// Correct path to your JSON file
+const formData = require('../../test-data/formsdata.json');
 
 test.describe('Forms', () => {
 
   test('User can fill basic form and submit successfully', async ({ page }) => {
+    // Declare formPage inside the test block (scope-safe)
     const formPage = new FormPage(page);
 
-    // Open the page
     await formPage.open();
 
     // Fill text fields
-    await formPage.fillTextField('Enter Name', 'Ali');
-    await formPage.fillTextField('Enter Email', 'ali@test.com');
-    await formPage.fillTextField('Enter Phone', '1234567890');
-    await formPage.fillTextField('Address', 'test address');
+    for (const label in formData.textFields) {
+      await formPage.fillTextField(label, formData.textFields[label]);
+    }
 
     // Select radio button
-    await formPage.selectRadio('Male');
+    await formPage.selectRadio(formData.radio);
 
-    // Select checkbox
-    await formPage.selectCheckbox('Monday');
+    // Select checkboxes
+    for (const checkbox of formData.checkboxes) {
+      await formPage.selectCheckbox(checkbox);
+    }
 
     // Select dropdowns
-    await formPage.selectDropdown('Country:', 'Canada');
-    await formPage.selectDropdown('colors', 'Red');
-    await formPage.selectDropdown('Sorted List', 'Lion');
+    for (const label in formData.dropdowns) {
+      await formPage.selectDropdown(label, formData.dropdowns[label]);
+    }
 
     // Fill date fields
-    await formPage.fillDateField('Start Date', '2025-08-21');
-    await formPage.fillDateField('End Date', '2026-05-21');
+    for (const placeholder in formData.dates) {
+      await formPage.fillDateField(placeholder, formData.dates[placeholder]);
+    }
 
     // Submit the form
-    await formPage.submitForm('#post-body-1307673142697428135');
+    await formPage.submitForm(formData.submitContainer);
   });
 
 });

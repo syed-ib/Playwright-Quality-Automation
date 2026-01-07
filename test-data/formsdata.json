@@ -1,0 +1,20 @@
+{
+  "textFields": {
+    "Enter Name": "Ibrahim",
+    "Enter Email": "ibrahim@test.com",
+    "Enter Phone": "1234567890",
+    "Address": "test address"
+  },
+  "radio": "Male",
+  "checkboxes": ["Monday"],
+  "dropdowns": {
+    "Country:": "Canada",
+    "colors": "Red",
+    "Sorted List": "Lion"
+  },
+  "dates": {
+    "Start Date": "2025-08-21",
+    "End Date": "2026-05-21"
+  },
+  "submitContainer": "#post-body-1307673142697428135"
+}
