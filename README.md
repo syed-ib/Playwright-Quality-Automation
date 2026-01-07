@@ -30,3 +30,7 @@ Features:
 
 ## Project Structure
 
+pages/ → Page Objects
+tests/ → Test specifications
+widgets/ → DragDrop, Slider, Dropdown grouped
+.github/ → GitHub Actions workflow
