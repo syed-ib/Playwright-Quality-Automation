@@ -8,9 +8,9 @@
   "radio": "Male",
   "checkboxes": ["Monday"],
   "dropdowns": {
-    "Country:": "Canada",
-    "colors": "Red",
-    "Sorted List": "Lion"
+    "Country:": "canada",
+    "colors": "red",
+    "Sorted List": "lion"
   },
   "dates": {
     "Start Date": "2025-08-21",
