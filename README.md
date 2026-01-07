@@ -30,28 +30,54 @@ Features:
 
 ## Project Structure
 
-playwright-quality-automation/
-├── pages/                   # Page Objects
-│   ├── AlertPage.ts
-│   ├── CheckboxPage.ts
-│   ├── DragDropPage.ts
-│   ├── DropdownPage.ts
-│   ├── FormPage.ts
-│   ├── MenuPage.ts
-│   ├── PopupPage.ts
-│   └── SliderPage.ts
-├── tests/                   # Tests
-│   ├── alerts/alerts.spec.ts
-│   ├── checkboxes/checkboxes.spec.ts
-│   ├── forms/forms.spec.ts
-│   ├── menu/menu.spec.ts
-│   ├── popups/popup.spec.ts
-│   └── widgets/             # Grouped widgets
-│       ├── dragdrop.spec.ts
-│       ├── slider.spec.ts
-│       └── dropdown.spec.ts
-├── .github/workflows/playwright.yml  # CI workflow
-├── .gitignore
-├── package.json
-├── playwright.config.ts
-└── README.md                # Project description, setup, usage
+-pages/ – All Page Objects
+
+-AlertPage.ts
+
+-CheckboxPage.ts
+
+-DragDropPage.ts
+
+-DropdownPage.ts
+
+-FormPage.ts
+
+-MenuPage.ts
+
+-PopupPage.ts
+
+-SliderPage.ts
+
+tests/ – All test specifications
+
+-alerts/ → alerts.spec.ts
+
+-checkboxes/ → checkboxes.spec.ts
+
+-forms/ → forms.spec.ts
+
+-menu/ → menu.spec.ts
+
+-popups/ → popup.spec.ts
+
+-widgets/ – Grouped widget tests
+
+-dragdrop.spec.ts
+
+-slider.spec.ts
+
+-dropdown.spec.ts
+
+.github/workflows/ – GitHub Actions workflow
+
+-playwright.yml
+
+Others
+
+-.gitignore
+
+-package.json
+
+-playwright.config.ts
+
+-README.md
