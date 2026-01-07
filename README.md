@@ -1,5 +1,9 @@
 # Playwright Quality Automation Framework
 
+Hi this is Ibrahim, I have design this automation framework for production level ready through AI. Saving time and design fast from scratch. I have covered few features now, next I will working on the ML model to implement in this framework for more auditable reports and learn the code itself to predict the ISTQB quality metrices.  
+
+Key: I protect the business from risk. 
+
 ## Overview
 This is a **professional, high-quality automation framework** built using **Playwright + TypeScript**.
 
